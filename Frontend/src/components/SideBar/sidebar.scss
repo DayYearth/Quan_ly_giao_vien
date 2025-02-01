@@ -1,0 +1,35 @@
+.sidebar {
+    padding: 0;
+    background: #c41e3a;  // Match header's red color
+    border-radius: 8px;
+    min-height: calc(100vh - 64px);
+    position: sticky;
+    top: 64px;
+    box-shadow: 0 2px 8px rgba(196, 30, 58, 0.2);
+    overflow: hidden;
+    width: 250px;
+
+    .ant-menu {
+        height: 100%;
+        border-right: 0;
+        background: #c41e3a;
+
+        &.ant-menu-dark {
+            background: #c41e3a;
+
+            .ant-menu-item {
+                &:hover {
+                    background: #d4314d;
+                }
+
+                &-selected {
+                    background: #a01830;
+                }
+            }
+
+            .ant-menu-submenu-title:hover {
+                background: #d4314d;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.resume-detail-wrapper {
+    padding: 20px;
+  
+    .thumbnail {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .resume-info {
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+  
+      .author {
+        margin-bottom: 16px;
+        a {
+          color: #1890ff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      .job-title,
+      .rating,
+      .description,
+      .reward {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+  
+        .left-side {
+          min-width: 100px;
+          font-weight: 500;
+          color: #666;
+        }
+  
+        .right-side {
+          flex: 1;
+        }
+      }
+  
+      .actions {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+  
+        button {
+          padding: 10px 20px;
+          border-radius: 6px;
+          border: none;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.3s;
+  
+          &.cart {
+            background: #fff;
+            border: 1px solid #ff4d4f;
+            color: #ff4d4f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+  
+            &:hover {
+              background: #ff4d4f;
+              color: #fff;
+            }
+  
+            .icon-cart {
+              font-size: 16px;
+            }
+          }
+  
+          &.now {
+            background: #1890ff;
+            color: #fff;
+  
+            &:hover {
+              background: #40a9ff;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .resume-detail-wrapper {
+      padding: 16px;
+  
+      .resume-info {
+        .title {
+          font-size: 20px;
+        }
+  
+        .actions {
+          flex-direction: column;
+          
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }

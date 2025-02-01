@@ -1,0 +1,128 @@
+.home {
+  &-breadcrumb {
+    margin-bottom: 16px;
+  }
+
+  &-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    &__header {
+      margin-bottom: 20px;
+
+      .ant-tabs-nav {
+        margin-bottom: 0;
+      }
+    }
+
+    &__body {
+      min-height: 400px;
+    }
+
+    &__footer {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.resume {
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 16px 0;
+  }
+
+  &-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    &__image {
+      position: relative;
+      padding-top: 133%; // 4:3 aspect ratio
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      padding: 12px;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.4;
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 12px;
+
+      &__status {
+        .ant-tag {
+          margin: 0;
+          font-size: 12px;
+          padding: 0 6px;
+        }
+      }
+    }
+    &__rating {
+      .ant-rate {
+        font-size: 14px;
+        line-height: 1;
+
+        &-star {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .home-content {
+    padding: 16px;
+  }
+}

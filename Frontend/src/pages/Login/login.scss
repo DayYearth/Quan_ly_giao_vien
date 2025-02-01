@@ -1,0 +1,37 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+
+    .login-container {
+        display: flex;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 900px;
+        width: 100%;
+    }
+
+    .login-image {
+        flex: 1;
+        background: url('D:/IT_hust/2024.1/ITSS/Frontend/src/assets/test.jpg') no-repeat center center;
+        background-size: cover;
+        
+    }
+
+    .login-form {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-form h3 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+}
